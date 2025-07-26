@@ -21,7 +21,12 @@ async function weather() {
     // console.log(query)
 
     try{
-        let response = await fetch(`http://api.weatherstack.com/current?access_key=22a2c1496f81fb58a7c91cb7401097d3&query=${query}`)
+        if (data.success === false) {
+            alert("City not found. Please enter a valid location.");
+        return;
+        }
+        
+        let response = await fetch(`https://api.weatherstack.com/current?access_key=22a2c1496f81fb58a7c91cb7401097d3&query=${query}`)
         let data = await response.json()
         // console.log(data)
         // console.log(data.current.weather_descriptions)
@@ -69,7 +74,7 @@ async function weather() {
             wImg.src = "./images/snow.png"
         } else if(weDesc.includes("thunder") ||
             weDesc.includes("storm") ||
-            weDesc.includes("hhail") ||
+            weDesc.includes("hail") ||
             weDesc.includes("blizzard")){
             wImg.src = "./images/storm.png"
         }
