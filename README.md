@@ -1,6 +1,6 @@
 # ⛅ Weather Forecast
 
-**Weather Forecast** is a sleek and responsive weather app developed by **Himanshu Pal**, offering real-time weather updates using the **Weatherstack API**. With a minimal UI and smooth interactivity, this project helps users get accurate climate data for any city or region in the world — right from their browser.
+**Weather Forecast** is a sleek and responsive weather app developed by **Himanshu Pal**, offering real-time weather updates using the **Weather API**. With a minimal UI and smooth interactivity, this project helps users get accurate climate data for any city or region in the world — right from their browser.
 
 ---
 
@@ -24,4 +24,4 @@
 - 💻 HTML5 — structure and semantic layout  
 - 🎨 CSS3 — styling and responsive UI  
 - 🧠 JavaScript (ES6) — logic, API fetch, dynamic rendering  
-- 🌍 Weatherstack API — data source  
+- 🌍 Weather API — data source  
