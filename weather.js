@@ -1,4 +1,3 @@
-// air quality (co , no2) , humidity , temp , weather desc , windspeed , country , localtime , name/region , air pressure
 
 let wDesc = document.querySelector('.w-desc')
 let wRegion = document.querySelector('.w-region')
@@ -22,28 +21,23 @@ async function weather() {
 
     try{
         
-        let response = await fetch(`https://api.weatherstack.com/current?access_key=22a2c1496f81fb58a7c91cb7401097d3&query=${query}`)
+        let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=62b0b4750883455ead4154159252607&q=${query}`)
         let data = await response.json()
         // console.log(data)
         // console.log(data.current.weather_descriptions)
 
-        if (data.success === false) {
-            alert("City not found. Please enter a valid location.");
-        return;
-        }
-
-        let rawDesc = data.current.weather_descriptions[0]
-        let Desc = rawDesc.split(",")[0].trim()
-        let weDesc = Desc.toLowerCase();
+        let rawDesc = data.current.condition.text
+        let weDesc = rawDesc.toLowerCase()
         // console.log(weDesc)
-        
+
+        let weTemp = data.current.temp_c
+        let weHummidity = data.current.humidity
+        let weSpeed = data.current.wind_kph
+        let wePressure = data.current.pressure_mb
+        let weTime = data.location.localtime
         let weName = data.location.name
         let weRegion = data.location.region
-        let weTemp = data.current.temperature
-        let weTime = data.location.localtime
-        let weHummidity = data.current.humidity
-        let weSpeed = data.current.wind_speed
-        let wePressure = data.current.pressure
+
     
         wRegion.textContent = `${weName}, ${weRegion}`
         wDesc.textContent = `${weDesc}`
