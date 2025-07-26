@@ -21,15 +21,16 @@ async function weather() {
     // console.log(query)
 
     try{
-        if (data.success === false) {
-            alert("City not found. Please enter a valid location.");
-        return;
-        }
         
         let response = await fetch(`https://api.weatherstack.com/current?access_key=22a2c1496f81fb58a7c91cb7401097d3&query=${query}`)
         let data = await response.json()
         // console.log(data)
         // console.log(data.current.weather_descriptions)
+
+        if (data.success === false) {
+            alert("City not found. Please enter a valid location.");
+        return;
+        }
 
         let rawDesc = data.current.weather_descriptions[0]
         let Desc = rawDesc.split(",")[0].trim()
