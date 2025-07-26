@@ -24,4 +24,4 @@
 - 💻 HTML5 — structure and semantic layout  
 - 🎨 CSS3 — styling and responsive UI  
 - 🧠 JavaScript (ES6) — logic, API fetch, dynamic rendering  
-- 🌍 Weather API — data source  
+- 🌍 Weather API — data source 
