@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+    <div class="container">
+        <div class="location">
+            <div class="input-field">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" name="location" id="location-input" class="location-input" placeholder="Enter city here...">
+            </div>
+            <button class="btn">Check Weather</button>
+        </div>
+
+        <div class="main-section">
+            <div class="left-section">
+                <img src="./images/sunny.png" alt="weather" class="weather-img">
+            </div>
+
+            <div class="right-section">
+                <h1 class="w-temp">33°C</h1>
+                <h2 class="w-region">Surat , Gujarat</h2>
+                <h4 class="w-desc">Sunny</h4>
+                <p class="w-time">2025-07-24 14:38</p>
+            </div>
+        </div>
+
+        <div class="other-info">
+            <div class="humidity">
+                <img src="./images/humidity.png" alt="humidity" class="info-img">
+                <p class="w-humidity">45%</p>
+            </div>
+            <div class="wind-speed">
+                <img src="./images/windy.png" alt="wind speed" class="info-img">
+                <p class="w-speed">20 km/h</p>
+            </div>
+            <div class="air-pressure">
+                <img src="./images/pressure.png" alt="air pressure" class="info-img">
+                <p class="w-pressure">1021 mb</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+</html>
