@@ -23,7 +23,7 @@ async function weather() {
         
         let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=62b0b4750883455ead4154159252607&q=${query}`)
         let data = await response.json()
-        // console.log(data)
+        console.log(data)
         // console.log(data.current.weather_descriptions)
 
         let rawDesc = data.current.condition.text
